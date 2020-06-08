@@ -8,7 +8,7 @@ import Document, {
 export default class Doc extends Document {
   public static async getInitialProps(ctx: DocumentContext) {
     const req: any = ctx.req
-    console.log("req/user", `${!!req}/${!!(req && req.user)}`)
+    console.log("_document req/user", `${!!req}/${!!(req && req.user)}`)
     const initialProps = await Document.getInitialProps(ctx)
     return {
       ...initialProps,
